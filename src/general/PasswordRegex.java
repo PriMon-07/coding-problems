@@ -2,7 +2,7 @@ package general;
 
 import java.util.regex.Pattern;
 
-public class AsciiArtScan {
+public class PasswordRegex {
 
 
     public static void main(String[] args) {
