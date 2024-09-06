@@ -1,15 +1,14 @@
 package oops;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
+@Data
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
 public class Employee extends Person {
     private int empId;
-
-    public int getEmpId() {
-        return empId;
-    }
-
-    public void setEmpId(int empId) {
-        this.empId = empId;
-    }
 
     public void setAge(int age) throws InvalidAgeException {
         if (age < 18) {
