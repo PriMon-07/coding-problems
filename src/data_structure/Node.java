@@ -4,13 +4,13 @@ import lombok.Data;
 
 @Data
 public class Node {
-    private Integer value;
-    private Node left;
-    private Node right;
+    private int value;
+    private Node previous;
+    private Node next;
 
-    public Node(Integer value) {
+    public Node (int value) {
         this.value = value;
-        this.left = null;
-        this.right = null;
+        this.previous = null;
+        this.next = null;
     }
 }

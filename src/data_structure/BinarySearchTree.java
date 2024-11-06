@@ -1,7 +1,7 @@
 package data_structure;
 
 public class BinarySearchTree {
-    Node root;
+    TreeNode root;
 
     public BinarySearchTree() {
         root = null;
@@ -11,37 +11,37 @@ public class BinarySearchTree {
         this.root = insert(root, value);
     }
 
-    private Node insert(Node node, Integer value) {
+    private TreeNode insert(TreeNode treeNode, Integer value) {
 
-        if (node == null) {
-            node = new Node(value);
-            return node;
+        if (treeNode == null) {
+            treeNode = new TreeNode(value);
+            return treeNode;
         }
 
-        if (value < node.getValue()) {
-            node.setLeft(insert(node.getLeft(), value));
+        if (value < treeNode.getValue()) {
+            treeNode.setLeft(insert(treeNode.getLeft(), value));
         } else {
-            node.setRight(insert(node.getRight(), value));
+            treeNode.setRight(insert(treeNode.getRight(), value));
         }
-        return node;
+        return treeNode;
     }
 
-    public Node search(Integer key) {
+    public TreeNode search(Integer key) {
         return search(this.root, key);
     }
 
-    private Node search(Node node, Integer key) {
-        if (node == null) {
+    private TreeNode search(TreeNode treeNode, Integer key) {
+        if (treeNode == null) {
             return null;
         }
-        if ((int) node.getValue() == key) {
-            return node;
+        if ((int) treeNode.getValue() == key) {
+            return treeNode;
         }
 
-        if (key < node.getValue()) {
-            return search(node.getLeft(), key);
+        if (key < treeNode.getValue()) {
+            return search(treeNode.getLeft(), key);
         } else {
-            return search(node.getRight(), key);
+            return search(treeNode.getRight(), key);
         }
     }
 
@@ -49,31 +49,31 @@ public class BinarySearchTree {
         this.root =  delete(this.root, value);
     }
 
-    private Node delete(Node node, Integer value) {
-        if (node == null) {
+    private TreeNode delete(TreeNode treeNode, Integer value) {
+        if (treeNode == null) {
             return null;
         }
 
-        if (value < node.getValue()) {
-            node.setLeft(delete(node.getLeft(), value));
-        } else if (value > node.getValue()) {
-            node.setRight(delete(node.getRight(), value));
+        if (value < treeNode.getValue()) {
+            treeNode.setLeft(delete(treeNode.getLeft(), value));
+        } else if (value > treeNode.getValue()) {
+            treeNode.setRight(delete(treeNode.getRight(), value));
         } else {
-            if (node.getLeft() == null) {
-                return node.getRight();
-            } else if (node.getRight() == null) {
-                return node.getLeft();
+            if (treeNode.getLeft() == null) {
+                return treeNode.getRight();
+            } else if (treeNode.getRight() == null) {
+                return treeNode.getLeft();
             }
 
-            Node successor = evaluateSuccessor(node);
-            node.setValue(successor.getValue());
-            node.setRight(delete(node.getRight(), successor.getValue()));
+            TreeNode successor = evaluateSuccessor(treeNode);
+            treeNode.setValue(successor.getValue());
+            treeNode.setRight(delete(treeNode.getRight(), successor.getValue()));
         }
-        return node;
+        return treeNode;
     }
 
-    private Node evaluateSuccessor(Node node) {
-        Node suc = node.getRight();
+    private TreeNode evaluateSuccessor(TreeNode treeNode) {
+        TreeNode suc = treeNode.getRight();
         while (suc.getLeft() != null) {
             suc = suc.getLeft();
         }
@@ -85,11 +85,11 @@ public class BinarySearchTree {
         System.out.println("\n");
     }
 
-    private void inOrder(Node node) {
-        if (node != null) {
-            inOrder(node.getLeft());
-            System.out.print(node.getValue() + " ");
-            inOrder(node.getRight());
+    private void inOrder(TreeNode treeNode) {
+        if (treeNode != null) {
+            inOrder(treeNode.getLeft());
+            System.out.print(treeNode.getValue() + " ");
+            inOrder(treeNode.getRight());
         }
     }
 
@@ -98,11 +98,11 @@ public class BinarySearchTree {
         System.out.println("\n");
     }
 
-    private void preOrder(Node node) {
-        if (node != null) {
-            System.out.print(node.getValue() + " ");
-            preOrder(node.getLeft());
-            preOrder(node.getRight());
+    private void preOrder(TreeNode treeNode) {
+        if (treeNode != null) {
+            System.out.print(treeNode.getValue() + " ");
+            preOrder(treeNode.getLeft());
+            preOrder(treeNode.getRight());
         }
     }
 
@@ -111,11 +111,11 @@ public class BinarySearchTree {
         System.out.println("\n");
     }
 
-    private void postOrder(Node node) {
-        if (node != null) {
-            preOrder(node.getLeft());
-            preOrder(node.getRight());
-            System.out.print(node.getValue() + " ");
+    private void postOrder(TreeNode treeNode) {
+        if (treeNode != null) {
+            preOrder(treeNode.getLeft());
+            preOrder(treeNode.getRight());
+            System.out.print(treeNode.getValue() + " ");
         }
     }
 
