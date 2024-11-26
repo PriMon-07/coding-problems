@@ -1,4 +1,4 @@
-package synchronization;
+package concurrency;
 
 public class ThreadCount extends Thread {
     private Count count;

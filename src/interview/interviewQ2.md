@@ -152,38 +152,6 @@ public static void sortStack(Stack<Integer> stack) {
 }
 ```
 
-**Creating a Singleton Class**
-
-```java
-public class Singleton {
-    private static final Singleton INSTANCE = new Singleton();
-
-    private Singleton() {}
-
-    public static Singleton getInstance() {
-        return INSTANCE;
-    }
-}
-```
-**Create a Resource class and make it such that only one instance could be used**
-
-```java
-public class Resource {
-    private static final Resource INSTANCE = new Resource();
-
-    private Resource() {
-    }
-
-    public static Resource getInstance() {
-        return INSTANCE;
-    }
-
-    // ... other methods of the Resource class
-}
-```
-
-This is the Singleton pattern. It ensures that only one instance of the `Resource` class exists, and it's accessed through the `getInstance()` method.
-
 **Lambda Functions with Examples Between Java Versions**
 
 **Java 7 and Earlier:**
@@ -210,12 +178,6 @@ Dependency Injection (DI) is a design pattern where objects get their dependenci
 * **Constructor Injection:** Inject dependencies through the constructor.
 * **Setter Injection:** Inject dependencies through setter methods.
 * **Field Injection:** Inject dependencies directly into fields (less preferred).
-
-**Overloading equals() and hashCode()**
-
-* **`equals()`:** Determines object equality.
-* **`hashCode()`:** Generates a hash code for an object.
-* **Contract:** If two objects are equal, their `hashCode()` must be the same.
 
 **Brute Force Logic for Max 0s in a Row**
 
@@ -278,26 +240,60 @@ public static int maxZeros(int[][] matrix) {
 **Printing Even and Odd Numbers Using Two Threads**
 
 ```java
-class OddEvenPrinter {
-    private int number = 1;
-    private boolean isOdd = true;
+class PrintNumbers {
+   private final int limit;
+   private int number = 1;
 
-    public synchronized void printNumber() {
-        while (number <= 10) {
-            if (isOdd) {
-                System.out.print(number + " ");
-                number++;
-                isOdd = false;
-                notify();
-            } else {
-                try {
-                    wait();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
+   public PrintNumbers(int limit) {
+      this.limit = limit;
+   }
+
+   public synchronized void printOdd() throws InterruptedException {
+      while (number < limit) {
+         while (number % 2 == 0) {
+            wait();
+         }
+         System.out.println("Odd: " + number);
+         number++;
+         notify();
+      }
+   }
+
+   public synchronized void printEven() throws InterruptedException {
+      while (number < limit) {
+         while (number % 2 != 0) {
+            wait();
+         }
+         System.out.println("Even: " + number);
+         number++;
+         notify();
+      }
+   }
+}
+
+public class Main {
+   public static void main(String[] args) {
+      final PrintNumbers printNumbers = new PrintNumbers(20);
+
+      Thread oddThread = new Thread(() -> {
+         try {
+            printNumbers.printOdd();
+         } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+         }
+      });
+
+      Thread evenThread = new Thread(() -> {
+         try {
+            printNumbers.printEven();
+         } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+         }
+      });
+
+      oddThread.start();
+      evenThread.start();
+   }
 }
 ```
 
@@ -341,25 +337,12 @@ public static boolean isPowerOf10(int num) {
 **Dialect in Hibernate**
 Specifies the database-specific SQL dialect.
 
-**Design Patterns**
-
-* Singleton, Factory, Observer, Strategy, etc.
-
 **Account (Saving, Current) Cash Withdrawal Database and Java Layer Design**
 
 * Design a database schema with tables for accounts, transactions, etc.
 * Use Hibernate or JDBC to interact with the database.
 * Implement business logic for withdrawals, interest calculations, etc.
 * Consider using design patterns like Strategy or Template Method for different account types.
-
-**Abstract Class vs. Interface**
-Refer to point 6.
-
-**Internal Implementation of HashSet**
-HashSet uses a hash table to store elements.
-
-**Finding Two Numbers Summing to k**
-Use a HashMap to store seen numbers and their complements.
 
 **Time Complexities of Get and Put Methods of Map**
 O(1) on average, but can be O(n) in worst-case scenarios due to collisions.
@@ -381,9 +364,6 @@ String highestAverageStudent = averages.entrySet().stream()
 
 **Java 8 Streams**
 Stream API provides a functional approach to process collections of data.
-
-**Comparator and Comparable**
-Refer to point 14.
 
 **Changing the Behavior of External Jar Classes**
 
@@ -445,7 +425,18 @@ public class JdbcConnectionPool {
 }
 ```
 
-**Maximum Number of People in a Conference**
+**Find the point where maximum intervals overlap**
+
+Consider a big party where a log register for guest’s entry and exit times is maintained. Find the time at which there are maximum guests in the party
+
+**Example:**
+
+```
+Input: 
+arrival = [1, 2, 10, 5, 5]
+exit = [4, 5, 12, 9, 12];
+Output: 3
+```
 
 ```java
 public int maxAttendees(int[] arrival, int[] departure) {
@@ -467,6 +458,39 @@ public int maxAttendees(int[] arrival, int[] departure) {
     return maxCount;
 }
 ```
+
+**Maximum Number of People in a Events that can be attended**
+
+You are given an array of events where `events[i] = [startDayi, endDayi]`. Every event `i` starts at `startDayi` and ends at `endDayi`.
+
+You can attend an event `i` at any day `d` where `startDayi <= d <= endDayi`. You can only attend one event at any time.
+
+Return the maximum number of events you can attend.
+
+**Example 1:**
+
+```
+Input: events = [[1,2],[2,3],[3,4]]
+Output: 3
+Explanation: You can attend all the three events.
+One way to attend them all is as shown.
+Attend the first event on day 1.
+Attend the second event on day 2.
+Attend the third event on day 3.
+```
+
+**Example 2:**
+
+```
+Input: events = [[1,2],[2,3],[3,4],[1,2]]
+Output: 4
+```
+
+**Constraints:**
+
+* `1 <= events.length <= 10^5`
+* `events[i].length == 2`
+* `1 <= startDayi <= endDayi <= 10^5`
 
 **Total Quantity from PersonalDetails**
 

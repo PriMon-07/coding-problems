@@ -1,4 +1,4 @@
-package synchronization.threadcommunication;
+package concurrency.threadcommunication;
 
 public class Producer implements Runnable {
     private final SharedResource sharedResource;

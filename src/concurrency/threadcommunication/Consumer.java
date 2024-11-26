@@ -1,4 +1,4 @@
-package synchronization.threadcommunication;
+package concurrency.threadcommunication;
 
 public class Consumer implements Runnable{
     private final SharedResource sharedResource;

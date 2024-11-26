@@ -1,4 +1,4 @@
-package synchronization.threadcommunication;
+package concurrency.threadcommunication;
 
 public class ThreadCommunication {
     public static void main(String[] args) {
