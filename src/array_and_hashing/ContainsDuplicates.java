@@ -79,26 +79,6 @@ public class ContainsDuplicates {
         return false;
     }
 
-    public boolean containsNearbyAlmostDuplicate(int[] nums, int indexDiff, int valueDiff) {
-        NavigableSet<Integer> set = new TreeSet<>();
-        for (int j = 0; j < nums.length; j++) {
-            // nums[i] <= valueDiff + nums[j]
-            // nums[i] >= num[j] - valueDiff
-            int numILowerBoundMax = valueDiff + nums[j];
-            int numIUpperBoundMin = nums[j] - valueDiff;
-            Integer numILowerBound = set.floor(numILowerBoundMax);
-            Integer numIUpperBound = set.ceiling(numIUpperBoundMin);
-            if ((numILowerBound != null && numILowerBound >= nums[j]) ||
-                    (numIUpperBound != null &&  numIUpperBound <= nums[j])) {
-                return true;
-            }
-            set.add(nums[j]);
-            if (set.size() > indexDiff) {
-                set.remove(nums[j - indexDiff]);
-            }
-        }
-        return false;
-    }
 
     public static void main(String[] args) {
         int[] nums1 = new int[]{4, 5, 6, 4};
@@ -113,8 +93,5 @@ public class ContainsDuplicates {
         System.out.println("Naive approach: " + containsDuplicates.solutionUsingNestedLoop(nums2));
         System.out.println("Hashing approach: " + containsDuplicates.solutionUsingHashing(nums2));
         System.out.println("Sorting approach: " + containsDuplicates.solutionUsingSorting(nums2));
-
-        int[] nums3 = new int[]{1,5,9,1,5,9};
-        System.out.println(containsDuplicates.containsNearbyAlmostDuplicate(nums3, 2, 3));
     }
 }
