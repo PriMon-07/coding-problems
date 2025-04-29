@@ -1,10 +1,8 @@
-package array_and_hashing;
+package problems.array_and_hashing;
 
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.NavigableSet;
 import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * <h4>Contains Duplicate</h4>
