@@ -72,7 +72,6 @@ public class ValidAnagram {
      * @return {@code true} if t is an anagram of s, otherwise {@code false}
      */
     public boolean isAnagramHashMap(String s, String t) {
-
         if (s.length() != t.length()) {
             return false;
         }
@@ -87,7 +86,6 @@ public class ValidAnagram {
 
         return sCount.equals(tCount);
     }
-
 
     /**
      * Checks if two strings are anagrams using a hash table.
@@ -104,7 +102,6 @@ public class ValidAnagram {
      * @return {@code true} if t is an anagram of s, otherwise {@code false}
      */
     public boolean isAnagramHashTable(String s, String t) {
-
         if (s.length() != t.length()) {
             return false;
         }
