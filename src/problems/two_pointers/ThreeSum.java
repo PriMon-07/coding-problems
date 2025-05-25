@@ -55,4 +55,12 @@ public class ThreeSum {
         }
         return resultList;
     }
+
+
+    public static void main(String[] args) {
+        ThreeSum threeSum = new ThreeSum();
+        int[] nums = {-1, 0, 1, 2, -1, -4};
+        List<List<Integer>> result = threeSum.threeSum(nums);
+        System.out.println(result);
+    }
 }
