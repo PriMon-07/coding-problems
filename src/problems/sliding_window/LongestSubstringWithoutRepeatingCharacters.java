@@ -46,7 +46,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
         int max = 0;
         for (int j = 0; j < s.length(); j++) {
             char c = s.charAt(j);
-            // while slides the left pointer till it finds a character that is not in the set
+            // while slides the left pointer till it removes the repeating character in right pointer
             while (set.contains(c)) {
                 set.remove(s.charAt(i));
                 i++;
