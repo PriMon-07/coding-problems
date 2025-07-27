@@ -1,4 +1,4 @@
-package design_patterns.factory;
+package factory;
 
 public interface Vehicle {
     void engineSpecs();

@@ -1,4 +1,4 @@
-package design_patterns.factory;
+package factory;
 
 public class VehicleFactoryClient {
     private final VehicleFactory vehicleFactory;
