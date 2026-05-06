@@ -20,22 +20,62 @@
 4. [Can we add more than one annotation on one class?](#q-can-we-add-more-than-one-annotation-on-one-class-for-example-can-an-employee-class-be-annotated-with-service-component-controller-repository)
    - Summary: Multiple stereotype annotations and their implications
 
+5. [Difference Between @AutoConfiguration and @EnableAutoConfiguration in Spring Boot](#q-difference-between-autoconfiguration-and-enableautoconfiguration-in-spring-boot)
+   - Summary: Modern vs legacy auto-configuration approaches
+
+6. [From where do we get dependencies from jar file and how to add in the pom.xml file](#q-from-where-do-we-get-dependencies-from-jar-file-and-how-to-add-in-the-pomxml-file)
+   - Summary: Maven dependency management and configuration
+
+7. [Use of settings.xml file](#q-use-of-settingsxml-file)
+   - Summary: Maven global configuration and settings
+
+8. [Which annotation is used for Asynchronous](#q-which-annotation-is-used-for-asynchronous)
+   - Summary: Spring async processing with @Async
+
+9. [What is Lambda Expressions](#q-what-is-lambda-expressions)
+   - Summary: Java 8 functional programming features
+
+10. [What happens when you try to remove data from a list during iteration?](#q-what-happens-when-you-try-to-remove-data-from-a-list-during-iteration)
+   - Summary: ConcurrentModificationException and solutions
+
+11. [How to safely remove items from a list during iteration?](#q-how-to-safely-remove-items-from-a-list-during-iteration)
+   - Summary: Safe list modification techniques
+
+12. [Extract all the data from table whose name start with capital A and small a from database](#q-extract-all-the-data-from-table-whose-name-start-with-capital-a-and-small-a-from-database)
+   - Summary: Database pattern matching queries
+
+13. [What is the default port for Tomcat server and how can we change the port number of Tomcat?](#q-what-is-the-default-port-for-tomcat-server-and-how-can-we-change-the-port-number-of-tomcat)
+   - Summary: Tomcat configuration and port management
+
+14. [What are the multithreading features introduced in Java 8?](#q-what-are-the-multithreading-features-introduced-in-java-8)
+   - Summary: Java 8 concurrency enhancements
+
+15. [What is synchronous and asynchronous programming and how can we use this in Spring?](#q-what-is-synchronous-and-asynchronous-programming-and-how-can-we-use-this-in-spring)
+   - Summary: Sync vs async programming in Spring
+
 ### **Java Collections & Streams**
-5. [How to find a list of employees who have 'abc' in their name from an employee table?](#q-how-to-find-a-list-of-employees-who-have-abc-in-their-name-from-an-employee-table)
+16. [How to find a list of employees who have 'abc' in their name from an employee table?](#q-how-to-find-a-list-of-employees-who-have-abc-in-their-name-from-an-employee-table)
    - Summary: Database query approaches and Java implementations
 
-6. [Can we modify elements in a list while looping?](#q-can-we-modify-elements-in-a-list-while-looping)
+17. [Can we modify elements in a list while looping?](#q-can-we-modify-elements-in-a-list-while-looping)
    - Summary: Safe and unsafe list modification techniques
 
-7. [What are real-time examples of eager loading and lazy loading?](#q-what-are-real-time-examples-of-eager-loading-and-lazy-loading)
+18. [What are real-time examples of eager loading and lazy loading?](#q-what-are-real-time-examples-of-eager-loading-and-lazy-loading)
    - Summary: Practical loading strategies with performance analysis
 
-8. [Does lazy loading call database multiple times?](#q-does-lazy-loading-call-database-multiple-times)
+19. [Does lazy loading call database multiple times?](#q-does-lazy-loading-call-database-multiple-times)
    - Summary: N+1 query problem and optimization solutions
 
+20. [How to declare a variable in entity class that is not a part of table](#q-how-to-declare-a-variable-in-entity-class-that-is-not-a-part-of-table)
+   - Summary: JPA transient fields and non-persistent properties
+
 ### **Git & Version Control**
-9. [What are commands you use to see difference between files in Git?](#q-what-are-commands-you-use-to-see-difference-between-files-in-git)
+21. [What are commands you use to see difference between files in Git?](#q-what-are-commands-you-use-to-see-difference-between-files-in-git)
    - Summary: Git diff commands and best practices
+
+### **REST APIs & HTTP**
+22. [What are the HTTP Methods in REST APIs?](#q-what-are-the-http-methods-in-rest-apis)
+   - Summary: HTTP methods and their usage in RESTful services
 
 ---
 
