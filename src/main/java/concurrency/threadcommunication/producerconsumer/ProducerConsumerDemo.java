@@ -1,6 +1,6 @@
-package concurrency.threadcommunication;
+package concurrency.threadcommunication.producerconsumer;
 
-public class ThreadCommunication {
+public class ProducerConsumerDemo {
     public static void main(String[] args) {
         SharedResource sharedResource = new SharedResource();
         Producer producer = new Producer(sharedResource);

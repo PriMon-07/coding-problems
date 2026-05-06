@@ -1,4 +1,4 @@
-package concurrency.threadcommunication;
+package concurrency.threadcommunication.producerconsumer;
 
 public class SharedResource {
     int data;
