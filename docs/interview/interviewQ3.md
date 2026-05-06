@@ -9,73 +9,73 @@
 
 ### **Spring Framework**
 1. [How does a Spring Boot application get started?](#q-how-does-a-spring-boot-application-get-started)
-   - Summary: Spring Boot startup process, auto-configuration, and embedded server launch
+   - [Summary](#summary-spring-boot-startup): Spring Boot startup process, auto-configuration, and embedded server launch
 
 2. [What are the advantages of Spring over Spring MVC?](#q-what-are-the-advantages-of-spring-over-spring-mvc)
-   - Summary: Complete Spring framework vs Spring MVC module comparison
+   - [Summary](#summary-spring-advantages): Complete Spring framework vs Spring MVC module comparison
 
 3. [What are annotations from controller till repository that you use?](#q-what-are-annotations-from-controller-till-repository-that-you-use)
-   - Summary: Comprehensive Spring annotations across all layers
+   - [Summary](#summary-spring-annotations): Comprehensive Spring annotations across all layers
 
 4. [Can we add more than one annotation on one class?](#q-can-we-add-more-than-one-annotation-on-one-class-for-example-can-an-employee-class-be-annotated-with-service-component-controller-repository)
-   - Summary: Multiple stereotype annotations and their implications
+   - [Summary](#summary-multiple-annotations): Multiple stereotype annotations and their implications
 
 5. [Difference Between @AutoConfiguration and @EnableAutoConfiguration in Spring Boot](#q-difference-between-autoconfiguration-and-enableautoconfiguration-in-spring-boot)
-   - Summary: Modern vs legacy auto-configuration approaches
+   - [Summary](#summary-autoconfiguration): Modern vs legacy auto-configuration approaches
 
 6. [From where do we get dependencies from jar file and how to add in the pom.xml file](#q-from-where-do-we-get-dependencies-from-jar-file-and-how-to-add-in-the-pomxml-file)
-   - Summary: Maven dependency management and configuration
+   - [Summary](#summary-maven-dependencies): Maven dependency management and configuration
 
 7. [Use of settings.xml file](#q-use-of-settingsxml-file)
-   - Summary: Maven global configuration and settings
+   - [Summary](#summary-settings-xml): Maven global configuration and settings
 
 8. [Which annotation is used for Asynchronous](#q-which-annotation-is-used-for-asynchronous)
-   - Summary: Spring async processing with @Async
+   - [Summary](#summary-async-annotation): Spring async processing with @Async
 
 9. [What is Lambda Expressions](#q-what-is-lambda-expressions)
-   - Summary: Java 8 functional programming features
+   - [Summary](#summary-lambda-expressions): Java 8 functional programming features
 
 10. [What happens when you try to remove data from a list during iteration?](#q-what-happens-when-you-try-to-remove-data-from-a-list-during-iteration)
-   - Summary: ConcurrentModificationException and solutions
+   - [Summary](#summary-list-iteration-exception): ConcurrentModificationException and solutions
 
 11. [How to safely remove items from a list during iteration?](#q-how-to-safely-remove-items-from-a-list-during-iteration)
-   - Summary: Safe list modification techniques
+   - [Summary](#summary-safe-list-removal): Safe list modification techniques
 
 12. [Extract all the data from table whose name start with capital A and small a from database](#q-extract-all-the-data-from-table-whose-name-start-with-capital-a-and-small-a-from-database)
-   - Summary: Database pattern matching queries
+   - [Summary](#summary-database-pattern-matching): Database pattern matching queries
 
 13. [What is the default port for Tomcat server and how can we change the port number of Tomcat?](#q-what-is-the-default-port-for-tomcat-server-and-how-can-we-change-the-port-number-of-tomcat)
-   - Summary: Tomcat configuration and port management
+   - [Summary](#summary-tomcat-port): Tomcat configuration and port management
 
 14. [What are the multithreading features introduced in Java 8?](#q-what-are-the-multithreading-features-introduced-in-java-8)
-   - Summary: Java 8 concurrency enhancements
+   - [Summary](#summary-java8-multithreading): Java 8 concurrency enhancements
 
 15. [What is synchronous and asynchronous programming and how can we use this in Spring?](#q-what-is-synchronous-and-asynchronous-programming-and-how-can-we-use-this-in-spring)
-   - Summary: Sync vs async programming in Spring
+   - [Summary](#summary-sync-async): Sync vs async programming in Spring
 
 ### **Java Collections & Streams**
 16. [How to find a list of employees who have 'abc' in their name from an employee table?](#q-how-to-find-a-list-of-employees-who-have-abc-in-their-name-from-an-employee-table)
-   - Summary: Database query approaches and Java implementations
+   - [Summary](#summary-employee-search): Database query approaches and Java implementations
 
 17. [Can we modify elements in a list while looping?](#q-can-we-modify-elements-in-a-list-while-looping)
-   - Summary: Safe and unsafe list modification techniques
+   - [Summary](#summary-modifying-list-elements): Safe and unsafe list modification techniques
 
 18. [What are real-time examples of eager loading and lazy loading?](#q-what-are-real-time-examples-of-eager-loading-and-lazy-loading)
-   - Summary: Practical loading strategies with performance analysis
+   - [Summary](#summary-loading-strategies): Practical loading strategies with performance analysis
 
 19. [Does lazy loading call database multiple times?](#q-does-lazy-loading-call-database-multiple-times)
-   - Summary: N+1 query problem and optimization solutions
+   - [Summary](#summary-lazy-loading-database): N+1 query problem and optimization solutions
 
 20. [How to declare a variable in entity class that is not a part of table](#q-how-to-declare-a-variable-in-entity-class-that-is-not-a-part-of-table)
-   - Summary: JPA transient fields and non-persistent properties
+   - [Summary](#summary-transient-fields): JPA transient fields and non-persistent properties
 
 ### **Git & Version Control**
 21. [What are commands you use to see difference between files in Git?](#q-what-are-commands-you-use-to-see-difference-between-files-in-git)
-   - Summary: Git diff commands and best practices
+   - [Summary](#summary-git-diff): Git diff commands and best practices
 
 ### **REST APIs & HTTP**
 22. [What are the HTTP Methods in REST APIs?](#q-what-are-the-http-methods-in-rest-apis)
-   - Summary: HTTP methods and their usage in RESTful services
+   - [Summary](#summary-http-methods): HTTP methods and their usage in RESTful services
 
 ---
 
@@ -194,7 +194,7 @@ Here’s a **diagram‑style explanation** of the Spring Boot startup lifecycle,
 
 ---
 
-### 🔎 Summary
+### 🔎 Summary {#summary-spring-boot-startup}
 - **Entry Point** → `main()` calls `SpringApplication.run()`.
 - **Context Creation** → ApplicationContext is built.
 - **Auto‑Config** → Beans are configured automatically based on classpath.
@@ -457,7 +457,7 @@ public class ModernAutoConfig {
 
 ---
 
-### **Summary**
+### **Summary** {#summary-autoconfiguration}
 
 - **`@EnableAutoConfiguration`** = Legacy, all-or-nothing approach
 - **`@AutoConfiguration`** = Modern, granular control
@@ -790,7 +790,7 @@ mvn versions:use-latest-releases
 
 ---
 
-### **Summary**
+### **Summary** {#summary-maven-dependencies}
 
 1. **Dependencies come from Maven repositories** (Maven Central, Spring, Oracle, etc.)
 2. **Add to `pom.xml`** with groupId, artifactId, version
@@ -1241,7 +1241,7 @@ set DATABASE_URL=jdbc:postgresql://localhost:5432/mydb
 
 ---
 
-### **Summary**
+### **Summary** {#summary-settings-xml}
 
 **`settings.xml` is Maven's configuration file that:**
 
@@ -1759,7 +1759,7 @@ mvn deploy:deploy-file \
 
 ---
 
-### **Summary**
+### **Summary** {#summary-local-jar-dependencies}
 
 **Methods to add local JAR dependencies:**
 
@@ -2341,7 +2341,7 @@ public class Product {
 
 ---
 
-### **Summary**
+### **Summary** {#summary-transient-fields}
 
 **Methods to declare non-persistent variables in entities:**
 
@@ -2862,7 +2862,7 @@ public CompletableFuture<String> unsafeAsync() {
 
 ---
 
-### **Summary**
+### **Summary** {#summary-async-annotation}
 
 **Primary annotation for asynchronous operations:**
 
@@ -3363,7 +3363,7 @@ names.forEach(name -> System.out.println(name));  // ❌ Slightly slower
 
 ---
 
-### **Summary**
+### **Summary** {#summary-lambda-expressions}
 
 **Lambda Expressions are anonymous functions that:**
 
@@ -3472,7 +3472,7 @@ public class ArrayList<E> implements List<E> {
 
 ---
 
-### **Summary**
+### **Summary** {#summary-list-iteration-exception}
 
 **Key Points:**
 - **Never modify** a list while using enhanced for loop or forEach
@@ -3814,7 +3814,7 @@ for (int i = 0; i < list.size(); i++) {
 
 ---
 
-### **Summary**
+### **Summary** {#summary-safe-list-removal}
 
 **Safe ways to remove items from a list during iteration:**
 
@@ -4336,7 +4336,7 @@ List<Employee> findByNameStartingWithA();
 
 ---
 
-### **Summary**
+### **Summary** {#summary-database-pattern-matching}
 
 **To extract data where names start with both capital 'A' and small 'a':**
 
@@ -4862,7 +4862,7 @@ logging.level.org.springframework=WARN
 
 ---
 
-### **Summary**
+### **Summary** {#summary-tomcat-port}
 
 **Tomcat Default Port:**
 - **HTTP:** 8080 (default)
@@ -5499,7 +5499,7 @@ public class ParallelStreamBestPractices {
 
 ---
 
-### **Summary**
+### **Summary** {#summary-java8-multithreading}
 
 **Java 8 Multithreading Features:**
 
@@ -6154,7 +6154,7 @@ public class AsyncServiceTest {
 
 ---
 
-### **Summary**
+### **Summary** {#summary-sync-async}
 
 **Synchronous vs Asynchronous in Spring:**
 
@@ -6753,7 +6753,7 @@ class UserRepositoryTest {
 
 ---
 
-### **Summary**
+### **Summary** {#summary-spring-annotations}
 
 **Annotations by Layer:**
 
@@ -7316,7 +7316,7 @@ public class MonitoredController {
 
 ---
 
-### **Summary**
+### **Summary** {#summary-spring-advantages}
 
 **Spring Framework Advantages Over Spring MVC Alone:**
 
@@ -7742,7 +7742,7 @@ class EmployeeSearchTest {
 
 ---
 
-### **Summary**
+### **Summary** {#summary-employee-search}
 
 **Finding employees with 'abc' in their name:**
 
@@ -8163,7 +8163,7 @@ git diff --no-index file1 file2
 
 ---
 
-### **Summary**
+### **Summary** {#summary-git-diff}
 
 **Git Diff Commands:**
 
@@ -8617,7 +8617,7 @@ public class EmployeeController {
 
 ---
 
-### **Summary**
+### **Summary** {#summary-multiple-annotations}
 
 **Multiple Annotations on One Class:**
 
@@ -9223,7 +9223,7 @@ public class BestPracticesGuide {
 
 ---
 
-### **Summary**
+### **Summary** {#summary-modifying-list-elements}
 
 **Modifying List Elements While Looping:**
 
@@ -9832,7 +9832,7 @@ public class Document {
 
 ---
 
-### **Summary**
+### **Summary** {#summary-loading-strategies}
 
 **Real-time Examples of Loading Strategies:**
 
@@ -10384,7 +10384,7 @@ public class PerformanceAnalysisService {
 
 ---
 
-### **Summary**
+### **Summary** {#summary-lazy-loading-database}
 
 **Does Lazy Loading Call Database Multiple Times?**
 
