@@ -3,6 +3,42 @@
 
 ---
 
+# Interview Questions and Answers - Q3
+
+## Table of Contents
+
+### **Spring Framework**
+1. [How does a Spring Boot application get started?](#q-how-does-a-spring-boot-application-get-started)
+   - Summary: Spring Boot startup process, auto-configuration, and embedded server launch
+
+2. [What are the advantages of Spring over Spring MVC?](#q-what-are-the-advantages-of-spring-over-spring-mvc)
+   - Summary: Complete Spring framework vs Spring MVC module comparison
+
+3. [What are annotations from controller till repository that you use?](#q-what-are-annotations-from-controller-till-repository-that-you-use)
+   - Summary: Comprehensive Spring annotations across all layers
+
+4. [Can we add more than one annotation on one class?](#q-can-we-add-more-than-one-annotation-on-one-class-for-example-can-an-employee-class-be-annotated-with-service-component-controller-repository)
+   - Summary: Multiple stereotype annotations and their implications
+
+### **Java Collections & Streams**
+5. [How to find a list of employees who have 'abc' in their name from an employee table?](#q-how-to-find-a-list-of-employees-who-have-abc-in-their-name-from-an-employee-table)
+   - Summary: Database query approaches and Java implementations
+
+6. [Can we modify elements in a list while looping?](#q-can-we-modify-elements-in-a-list-while-looping)
+   - Summary: Safe and unsafe list modification techniques
+
+7. [What are real-time examples of eager loading and lazy loading?](#q-what-are-real-time-examples-of-eager-loading-and-lazy-loading)
+   - Summary: Practical loading strategies with performance analysis
+
+8. [Does lazy loading call database multiple times?](#q-does-lazy-loading-call-database-multiple-times)
+   - Summary: N+1 query problem and optimization solutions
+
+### **Git & Version Control**
+9. [What are commands you use to see difference between files in Git?](#q-what-are-commands-you-use-to-see-difference-between-files-in-git)
+   - Summary: Git diff commands and best practices
+
+---
+
 ## Q: How does a Spring Boot application get started?
 
 **A Spring Boot application starts by running its `main` method, which calls `SpringApplication.run()`. This bootstraps the application context, applies auto‑configuration, and launches an embedded server (like Tomcat) if it’s a web app.**
